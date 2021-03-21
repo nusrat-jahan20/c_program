@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int i, count=0, sum;
+    int i, count=0, sum=0;
     for (i = 15; i <= 75; i++)
     {
         if (i % 5 == 0)
@@ -9,14 +9,12 @@ int main()
             if (i % 8 != 0)
             {
                 printf("%d\n", i);
+                count = count + 1;
+                sum = sum + i;
             }
         }
-        count++;
-        sum = 0;
-        sum = sum + i;
-        // printf("%d", sum);
     }
-    // printf("Total number = %d", count);
-    printf("Sum of those numbers is %d", sum);
+    printf("Total number = %d\n", count);
+    printf("Sum of those numbers is %d\n", sum);
     return 0;
 }
