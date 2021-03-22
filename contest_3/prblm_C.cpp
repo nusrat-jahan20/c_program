@@ -27,19 +27,3 @@ int main()
             
     }
 }
-
-// while (fgets(arr, sizeof(arr), stdin))
-// {
-//     arr[i] = 'R';
-//     if (arr[i] == arr[i + 1])
-//     {
-//         count = count + 1;
-//         printf("%d", count);
-//     }
-//     else
-//     {
-//         count = 1;
-//         printf("%d", count);
-//     }
-// }
-// return 0;

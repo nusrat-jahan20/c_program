@@ -2,10 +2,11 @@
 int main()
 {
     char name[10] = "NUSRAT";
-    int i;
-    for (i = 1; i <= 10; i++)
+    int i = 1;
+    while (i <= 10)
     {
         printf("%s\n", name);
+        i++;
     }
     return 0;
 }
