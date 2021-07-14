@@ -26,12 +26,3 @@ int main()
     }
         return 0;
 }
-
-// if (ara[i] == ara[j])
-// {
-//     printf("ne krasivo");
-// }
-// else
-// {
-//     printf("prekrasnyy");
-// }
