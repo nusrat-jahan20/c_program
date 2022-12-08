@@ -13,6 +13,7 @@ int main()
     {
         for (j = 1; j <= 3; j++){
             arr[i] = arr[j];
+            
             if (arr[j] == 'R' && arr[j + 1] == 'R')
             {
                 count = count + 1;
