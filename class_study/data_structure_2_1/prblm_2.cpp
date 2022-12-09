@@ -8,7 +8,6 @@ int main()
     scanf("%d", &n);
 
     printf("Enter the Array: ");
-
     for (i = 1; i <= n; i++)
     {
         scanf("%d", &arr[i]);
