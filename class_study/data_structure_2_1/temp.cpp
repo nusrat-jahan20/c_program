@@ -1,31 +1,31 @@
 #include <stdio.h>
+
 int main()
 {
-    int arr[50], pos, i, n, value, size;
+    int arr[100], pos, i, n;
 
-    printf("Enter number of elements in the array: ");
+    printf("Enter number of elements in array : ");
     scanf("%d", &n);
 
-    printf("\nEnter %d elements: ", n);
-
+    printf("Enter %d elements : ", n);
     for (i = 0; i < n; i++)
         scanf("%d", &arr[i]);
 
-    printf("\nPlease enter the location where you want to insert a new element : ");
+    printf("Enter the location where you wish to delete element : ");
     scanf("%d", &pos);
 
-    printf("\nPlease enter the value : ");
-    scanf("%d", &value);
+    if (pos >= n + 1)
+        printf("Deletion not possible.\n");
 
-    for (i = n - 1; i >= pos - 1; i--)
-        arr[i + 1] = arr[i];
+    else
+    {
+        for (i = pos - 1; i < n - 1; i++)
+            arr[i] = arr[i + 1];
 
-    arr[pos - 1] = value;
-
-    printf("\nResultant array is : ");
-
-    for (i = 0; i <= n; i++)
-        printf("%d ", arr[i]);
+        printf("Resultant array is : ");
+        for (i = 0; i < n - 1; i++)
+            printf("%d ", arr[i]);
+    }
 
     return 0;
 }
