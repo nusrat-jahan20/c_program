@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int arr[20], i, n;
+    int n, arr[20], i;
     printf("How many elements: ");
     scanf("%d", &n);
 

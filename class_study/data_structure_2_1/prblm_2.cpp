@@ -1,13 +1,13 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int n, i, j, max, min, arr[n];
-    int Large, Small;
+    int n, i, Large, Small;
+    int arr[30];
 
-    printf("How many elements: ");
+    printf("Number of the array element ");
     scanf("%d", &n);
 
-    printf("Enter the Array: ");
+    printf("Enter the element of the array ");
     for (i = 1; i <= n; i++)
     {
         scanf("%d", &arr[i]);
@@ -18,7 +18,7 @@ int main()
 
     for (i = 1; i <= n; i++)
     {
-        if(arr[i]>Large)
+        if (arr[i] > Large)
         {
             Large = arr[i];
         }
@@ -26,8 +26,10 @@ int main()
         {
             Small = arr[i];
         }
-        printf("max element is%d", Large);
-        printf("min element is%d", Small);
     }
+
+    printf("The largest element is %d\n", Large);
+    printf("The smallest element is %d", Small);
+
     return 0;
 }
