@@ -2,35 +2,39 @@
 
 int main()
 {
-    int x, y, arr[1000];
-    printf("Enter numbers of 1st array : ");
-    scanf("%d", &x);
-    int s1[x + 1];
-    printf("Enter %d numbers in this array : ", x);
+    int arr[100], i, j, n, swap;
 
-    for (int i = 0; i < x; i++)
+    printf("Enter number of elements : ");
+    scanf("%d", &n);
+
+    printf("Enter %d integers : ", n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    for (i = 0; i < n - 1 ; i++)
     {
-        scanf("%d", &s1[i]);
-        arr[i] = s1[i];
+        for (j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = swap;
+            }
+        }
     }
 
-
-
-    printf("\nEnter numbers of 2nd array  : ");
-    scanf("%d", &y);
-    int s2[y + 1];
-    printf("Enter %d numbers in this array : ", y);
-
-    for (int i = x; i < x + y; i++)
-    {
-        scanf("%d", &s2[i]);
-        arr[i] = s2[i];
-    }
-
-    printf("\nmarge element : ", y);
-    for (int i = 0; i < x + y; i++)
-    {
+    printf("Sorted list in ascending order : ");
+    for (i = 0; i < n; i++)
         printf("%d ", arr[i]);
-    }
+
+    printf("\n");
+
+    printf("Sorted list in decending order : ");
+    for (i = n - 1; i >= 0; i--)
+        printf("%d ", arr[i]);
+
+    printf("\n");
+
     return 0;
 }
