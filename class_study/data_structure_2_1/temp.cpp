@@ -2,30 +2,35 @@
 
 int main()
 {
-    int arr[100], pos, i, n;
+    int x, y, arr[1000];
+    printf("Enter numbers of 1st array : ");
+    scanf("%d", &x);
+    int s1[x + 1];
+    printf("Enter %d numbers in this array : ", x);
 
-    printf("Enter number of elements in array : ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements : ", n);
-    for (i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    printf("Enter the location where you wish to delete element : ");
-    scanf("%d", &pos);
-
-    if (pos >= n + 1)
-        printf("Deletion not possible.\n");
-
-    else
+    for (int i = 0; i < x; i++)
     {
-        for (i = pos - 1; i < n - 1; i++)
-            arr[i] = arr[i + 1];
-
-        printf("Resultant array is : ");
-        for (i = 0; i < n - 1; i++)
-            printf("%d ", arr[i]);
+        scanf("%d", &s1[i]);
+        arr[i] = s1[i];
     }
 
+
+
+    printf("\nEnter numbers of 2nd array  : ");
+    scanf("%d", &y);
+    int s2[y + 1];
+    printf("Enter %d numbers in this array : ", y);
+
+    for (int i = x; i < x + y; i++)
+    {
+        scanf("%d", &s2[i]);
+        arr[i] = s2[i];
+    }
+
+    printf("\nmarge element : ", y);
+    for (int i = 0; i < x + y; i++)
+    {
+        printf("%d ", arr[i]);
+    }
     return 0;
 }
