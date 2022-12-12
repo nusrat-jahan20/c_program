@@ -1,31 +1,17 @@
 #include <stdio.h>
 #include <string.h>
-
 int main()
 {
-    int i, count = 0;
-    char str1[100], str2[100];
-    printf("Enter 1st string : ");
-    gets(str1);
-    printf("Enter 1st string : ");
-    gets(str2);
-    int len1 = strlen(str1);
-    int len2 = strlen(str2);
+    char str[100];
+    printf("Enter the string : ");
+    gets(str);
+    int length = strlen(str);
 
-    if (len1 != len2)
-        printf("both are not same\n");
-    else
+    printf("Reverse array : ");
+    for (int i = length - 1; i >= 0; i--)
     {
-        for (i = 0; i < len1; i++)
-        {
-            if (str1[i] == str2[i])
-                count++;
-        }
-
-        if (count == len1)
-            printf("both are same\n");
-        else
-            printf("both are not same\n");
+        printf("%c", str[i]);
     }
+
     return 0;
 }
