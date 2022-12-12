@@ -2,26 +2,30 @@
 
 int main()
 {
-    int arr[50], i, target, n;
-    printf("How many elements do you want in the array : ");
-    scanf("%d", &n);
+    int r, c;
+    printf("Enter numbers of row : ");
+    scanf("%d", &r);
+    printf("Enter numbers of column : ");
+    scanf("%d", &c);
 
-    printf("Enter array elements : ");
-    for (i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
+    int arr[r][c], i, j;
 
-    printf("Enter element to search : ");
-    scanf("%d", &target);
-    for (i = 0; i < n; ++i)
+    for (i = 0; i < r; i++)
     {
-        if (arr[i] == target)
-            break;
+        for (j = 0; j < c; j++)
+            scanf("%d", &arr[i][j]);
     }
 
-    if (i < n)
-        printf("Target element found at location  %d \n", i);
-    else
-        printf("Target element not found in an array.\n");
-
+    printf("\nThe matrix is :");
+    for (i = 0; i < r; i++)
+    {
+        printf("\n");
+        for (j = 0; j < c; j++)
+            printf("%d ", arr[i][j]);
+    }
     return 0;
 }
+
+
+
+
