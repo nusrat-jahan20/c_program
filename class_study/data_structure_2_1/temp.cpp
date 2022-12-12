@@ -2,7 +2,7 @@
 
 int main()
 {
-    int r, c;
+    int r, c, sum = 0;
     printf("Enter numbers of row : ");
     scanf("%d", &r);
     printf("Enter numbers of column : ");
@@ -16,16 +16,15 @@ int main()
             scanf("%d", &arr[i][j]);
     }
 
-    printf("\nThe matrix is :");
     for (i = 0; i < r; i++)
     {
-        printf("\n");
         for (j = 0; j < c; j++)
-            printf("%d ", arr[i][j]);
+        {
+            if (i == j)
+                sum = sum + arr[i][j];
+        }
     }
+    printf("\nThe sum of diagonal elements of a square matrix is : %d\n", sum);
+
     return 0;
 }
-
-
-
-
