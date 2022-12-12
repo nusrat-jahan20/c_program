@@ -1,30 +1,31 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    int r, c, sum = 0;
-    printf("Enter numbers of row : ");
-    scanf("%d", &r);
-    printf("Enter numbers of column : ");
-    scanf("%d", &c);
+    int i, count = 0;
+    char str1[100], str2[100];
+    printf("Enter 1st string : ");
+    gets(str1);
+    printf("Enter 1st string : ");
+    gets(str2);
+    int len1 = strlen(str1);
+    int len2 = strlen(str2);
 
-    int arr[r][c], i, j;
-
-    for (i = 0; i < r; i++)
+    if (len1 != len2)
+        printf("both are not same\n");
+    else
     {
-        for (j = 0; j < c; j++)
-            scanf("%d", &arr[i][j]);
-    }
-
-    for (i = 0; i < r; i++)
-    {
-        for (j = 0; j < c; j++)
+        for (i = 0; i < len1; i++)
         {
-            if (i == j)
-                sum = sum + arr[i][j];
+            if (str1[i] == str2[i])
+                count++;
         }
-    }
-    printf("\nThe sum of diagonal elements of a square matrix is : %d\n", sum);
 
+        if (count == len1)
+            printf("both are same\n");
+        else
+            printf("both are not same\n");
+    }
     return 0;
 }
