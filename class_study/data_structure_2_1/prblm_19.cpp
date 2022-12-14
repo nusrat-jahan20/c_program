@@ -3,6 +3,9 @@
 
 int main()
 {
+    char txt[100], ptr[20];
+
+    printf("Enter the text ");
 
 
     

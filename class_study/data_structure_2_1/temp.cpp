@@ -1,22 +1,37 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
 int main()
 {
-	char str[100],ch;
-	printf("Enter the string : ");
-	gets(str);
-	int len=strlen(str);
-	printf("Enter the character for delete : ");
-	scanf("%c",&ch);
+    int arr[100], i, j, n, swap;
 
+    printf("Enter number of elements : ");
+    scanf("%d", &n);
 
-	printf("\nAfter removing '%c' ,we get the string : ",ch);
-	for(int i=0; i<len; i++)
-	{
-    	if(str[i]!=ch)
-        	printf("%c",str[i]);
-	}
-	printf("\n");
-    
-	return 0;
+    printf("Enter %d integers : ", n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    for (i = 1; i < n; i++)
+    {
+        int current = arr[i];
+        j = i - 1;
+
+        while (arr[j] > current && j >= 0)
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = current;
+    }
+
+    printf("Sorted list in ascending order : ");
+    for (i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    printf("\n");
+
+    printf("Sorted list in decending order : ");
+    for (i = n - 1; i >= 0; i--)
+        printf("%d ", arr[i]);
+
+    printf("\n");
 }

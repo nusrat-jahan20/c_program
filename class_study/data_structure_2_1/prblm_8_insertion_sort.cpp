@@ -15,17 +15,12 @@ int main()
     for ( i = 1; i < n; i++)
     {
         temp = arr[i];
-        for ( j = i - 1; j >=0; j--)
+        j = i - 1;
+        while (arr[j])
         {
-            if (arr[j] > temp)
-            {   
-                arr[j + 1] = arr[j];
-            }
-            else
-            {
-                arr[j + 1] = temp;
-            }
+            /* code */
         }
+        
     }
 
     printf("The sorted list is :");
